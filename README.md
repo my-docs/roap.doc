@@ -51,7 +51,7 @@ end
 (물론 읽는 사람도 roap과 AOP에 대한 이해가 있다는 가정 하에)<br>
 <br>
 물론 Aspect의 이름을 바꾸는것도 얼마든지 가능합니다. 만약 `supress-error`라는 이름이 읽는 사람으로 하여금 이 메소드가 안전하다는걸 한눈에 알아챌 수 없을 것 같다면 `IM EXTERMELY SAFE, SO I WILL NEVER THROW AN EXCETION` 등의 맘에 드는 이름 (마치 문장처럼) 으로 변경하는것 또한 자유입니다.<br>
-심지어 `roap`은 __RDoc__과 연계하여 사용할 수 있습니다. 코드로부터 자동 생성되는 document에도 `이 메소드는 (존나) 안전해요` 라는 사실을 알려줄 수 있다는 뜻입니다. 이는 추후에 자세히 다루도록 하겠습니다.    
+심지어 `roap`은 __[YARD](http://yardoc.org/)__과 연계하여 사용할 수 있습니다. 코드로부터 자동 생성되는 document에도 `이 메소드는 (존나) 안전해요` 라는 사실을 알려줄 수 있다는 뜻입니다. 이는 추후에 자세히 다루도록 하겠습니다.    
 
 
 Aspect를 만들어보기
@@ -194,7 +194,7 @@ end
 
 __Roap::TestHelper__<br>
 `TestHelper`를 사용하면 별도의 TestCase클래스를 작성하지 않고도 메소드 위에 바로 테스트를 선언할 수 있습니다.<br>
-__RDoc__스타일의 주석을 지원하기 때문에 document로 빌드되는 예제 코드가 정상적으로 동작하는지 또한 점검할 수 있도록 해줍니다.<br>
+__YARD__스타일의 주석을 지원하기 때문에 document로 빌드되는 예제 코드가 정상적으로 동작하는지 또한 점검할 수 있도록 해줍니다.<br>
 (별도의 테스트 유닛을 만들어 테스트하는 방법도 가능합니다. `TestHelper`확장은 테스트 도구의 기본적인 기능인 `Setup/Cleanup` 또한 지원하고 있습니다.)
 ```rb
 class MyMath
@@ -205,7 +205,7 @@ class MyMath
     a + b
   end
 
-  #--또는 RDoc 스타일
+  #--또는 yard 스타일
   # @example
   #   a = 10, b = 6;
   #   MyMath.sub(a, b) #=> 4
