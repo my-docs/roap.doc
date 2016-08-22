@@ -156,14 +156,14 @@ def about_rini
 end
 ```
 
-기본 또는 모듈로 제공되는 Aspect들
+基本または外部moduleとして提供されるAspectたち
 ----
 __Roap::DigestExtension__
 ```rb
 class AuthHandler
   #--sha256-digested password
   def login id, password
-    # 이곳에서 password는 자동으로 해싱된 상태입니다.
+    # ここではpasswordが自動的にSHA256-HASINGされた状況です。
   end
 
   include Roap::DigestExtension
@@ -171,7 +171,7 @@ end
 ```
 
 __Roap::LogExtension__<br>
-해당 메소드 호출 이전/이후에 자동으로 로그를 남길 수 있습니다.
+メソードコール以前/以後に自動的にログを出力することができます。
 ```rb
 class AuthHandler
   #--log-before I got a login request.
@@ -208,7 +208,7 @@ class MyMath
     a + b
   end
 
-  #--또는 yard 스타일
+  #--또는 yardスタイル
   # @example
   #   a = 10, b = 6;
   #   MyMath.sub(a, b) #=> 4
